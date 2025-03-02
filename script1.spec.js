@@ -23,7 +23,7 @@ test.only('Login page', async({browser})=>{
     console.log(count)
 
     for(let i=0;i<count;i++){
-        //const item = productno.nth(i);
+        const item = productno.nth(i);
         if(await item.locator("div").textContent()===productname){
             await item.locator("//span[text()='Add to Compare']").click();
             break;
